@@ -33,5 +33,23 @@ class Beverage
         return "This beverage is {$this->temperature} and {$this->color}.";
     }
 }
+class Beer extends Beverage
+{
+    // Properties
+    public string $name;
+    public float $alcoholPercentage;
+
+    // Constructor using parent constructor and setting additional properties
+    public function __construct(string $name, float $alcoholPercentage, string $color = "blond", float $price = 3.5, string $temperature = "cold") {
+        parent::__construct($color, $price, $temperature);
+        $this->name = $name;
+        $this->alcoholPercentage = $alcoholPercentage;
+    }
+
+    // Function to get alcohol percentage
+    public function getAlcoholPercentage(): float {
+        return $this->alcoholPercentage;
+    }
+}
 
 ?>
