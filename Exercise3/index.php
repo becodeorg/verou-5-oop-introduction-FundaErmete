@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Beverage 
 {
-    // Properties
+    // Properties 
     private string $color;
     private float $price;
     private string $temperature;
@@ -51,12 +51,17 @@ class Beer extends Beverage
     public function getAlcoholPercentage(): float {
         return $this->alcoholPercentage;
     }
+
+    // Public method to update color
+    public function updateColor(string $newColor): void {
+        $this->color = $newColor;
+    }
 }
 
-// Instantiate an object 
+// Instantiate an object representing Duvel
 $duvel = new Beer("Duvel", 8.5);
 
-// Print the alcohol percentage
+// Print the alcohol percentage 
 echo "Alcohol Percentage: " . $duvel->getAlcoholPercentage() . "\n";
 echo "Alcohol Percentage: {$duvel->getAlcoholPercentage()}\n";
 
@@ -66,8 +71,10 @@ echo "Color: " . $duvel->getColor() . "\n";
 // Print the result of getInfo 
 echo $duvel->getInfo() . "\n";
 
-// Attempt to call the undefined method getAlcoholPercentage 
+// Change the color of Duvel
+$duvel->updateColor('light');
 
-echo $duvel->getAlcoholPercentage(); 
+// Print the new color 
+echo "New Color: " . $duvel->getColor() . "\n";
 
 ?>
