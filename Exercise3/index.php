@@ -56,6 +56,16 @@ class Beer extends Beverage
     public function updateColor(string $newColor): void {
         $this->color = $newColor;
     }
+
+    // New private method beerInfo
+    private function beerInfo(): string {
+        return "Hi, I'm {$this->name} and have an alcohol percentage of {$this->alcoholPercentage} and I have a {$this->color} color.";
+    }
+
+    // Public method to print beerInfo
+    public function printBeerInfo(): void {
+        echo $this->beerInfo() . "\n";
+    }
 }
 
 // Instantiate an object representing Duvel
@@ -76,5 +86,8 @@ $duvel->updateColor('light');
 
 // Print the new color 
 echo "New Color: " . $duvel->getColor() . "\n";
+
+// Print beerInfo on a new line
+$duvel->printBeerInfo();
 
 ?>
