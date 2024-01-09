@@ -33,6 +33,16 @@ class Beverage
         return "This beverage is {$this->temperature} and {$this->color}.";
     }
 }
+
+// Instantiate an object representing cola
+$cola = new Beverage("Black", 2.0);
+
+// Print the result of getInfo 
+echo $cola->getInfo() . "\n";
+
+// Print the temperature 
+echo "Temperature: " . $cola->getTemperature() . "\n";
+
 class Beer extends Beverage
 {
     // Properties
