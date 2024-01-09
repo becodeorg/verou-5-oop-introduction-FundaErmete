@@ -52,4 +52,21 @@ class Beer extends Beverage
     }
 }
 
+// Instantiate an object 
+$duvel = new Beer("Duvel", 8.5);
+
+// Print the alcohol percentage
+echo "Alcohol Percentage: " . $duvel->getAlcoholPercentage() . "\n";
+echo "Alcohol Percentage: {$duvel->getAlcoholPercentage()}\n";
+
+// Print the color 
+echo "Color: " . $duvel->getColor() . "\n";
+
+// Print the result of getInfo 
+echo $duvel->getInfo() . "\n";
+
+// Attempt to call the undefined method getAlcoholPercentage 
+
+echo $duvel->getAlcoholPercentage(); 
+
 ?>
